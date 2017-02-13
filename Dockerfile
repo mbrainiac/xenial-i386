@@ -5,7 +5,7 @@ RUN apt-get update && \
 
 RUN apt-add-repository -y "ppa:ubuntu-toolchain-r/test"
 RUN apt-get -yq update
-RUN apt-get -yq --no-install-suggests --no-install-recommends --force-yes install libgnome-keyring-dev curl gcc make libfontconfig-dev
+RUN apt-get -yq --no-install-suggests --no-install-recommends --force-yes install libgnome-keyring-dev curl git build-essential gcc make libfontconfig-dev
 
 RUN useradd -m docker && echo "docker:docker" | chpasswd && adduser docker sudo
 
